@@ -1,0 +1,20 @@
+{
+  "window.zoomLevel": 0,
+  "editor.fontSize": 20,
+  "editor.largeFileOptimizations": false,
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "html.format.endWithNewline": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "editor.autoClosingBrackets": "always",
+  "editor.tabSize": 2,
+  "editor.tabCompletion": "on",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.tslint": true,
+  },
+  "editor.insertSpaces": false,
+  "editor.formatOnSave": true,
+  "javascript.preferences.quoteStyle": "single",
+}
