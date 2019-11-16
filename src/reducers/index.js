@@ -4,7 +4,7 @@ const ITEMS = (items = null, action) => {
   const payload = action.payload;
   if (action.type === 'SET_ITEMS') {
     return payload;
-  } else if (action.type === 'SET_CART') {
+  } else if (action.type === 'SET_CART_ASYNC') {
     return items.map((item) => {
       if (item.uuid === payload.uuid) {
         const quantity = item.quantity - payload.quantity;
@@ -18,7 +18,7 @@ const ITEMS = (items = null, action) => {
 
 const CART = (cart = [], action) => {
   const payload = action.payload;
-  if (action.type === 'SET_CART') {
+  if (action.type === 'SET_CART_ASYNC') {
     const itemExists = cart.find(item => item.uuid === payload.uuid);
     if (itemExists) {
       return cart.map((item) => {
@@ -32,7 +32,7 @@ const CART = (cart = [], action) => {
         return item;
       }).filter(a => a);
     } else {
-      return [ ...cart, payload ];
+      return [...cart, payload];
     }
   } else if (action.type === 'CHECKOUT') {
     return [];

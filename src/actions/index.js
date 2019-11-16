@@ -21,14 +21,11 @@ export const FETCH_ITEMS = () => (dispatch, getState) => {
   }
 };
 
-export const SET_CART = (payload) => (dispatch, getState) => {
-  const currentItem = getState().ITEMS.find(item => item.uuid === payload.uuid);
-  if (!(currentItem.quantity === 0 && payload.quantity > 0)) {
-    dispatch({
-      type: 'SET_CART',
-      payload
-    });
-  }
+export const SET_CART = (payload) => (dispatch) => {
+  dispatch({
+    type: 'SET_CART',
+    payload
+  });
 };
 
 export const CHECKOUT = () => {
